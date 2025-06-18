@@ -40,7 +40,8 @@ body {
 
 /* Header Transparent */
 .header-transparent {
-    background-color: transparent;
+    /* Match the footer color before scrolling */
+    background-color: var(--purple-dark);
     position: fixed;
     width: 100%;
     top: 0;
@@ -49,7 +50,8 @@ body {
 }
 
 .header-transparent.inner-page {
-    background-color: var(--success-green);
+    /* Use the same default color on inner pages */
+    background-color: var(--purple-dark);
 }
 
 .header-transparent.scrolled {
