@@ -6,16 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateHeader() {
         if (window.scrollY > headerHeight) {
             header.classList.add('scrolled');
-            header.querySelector('.logo h1').style.color = 'var(--primary-color)';
-            header.querySelectorAll('.nav-links li a').forEach(link => {
-                link.style.color = 'var(--primary-color)';
-            });
         } else {
             header.classList.remove('scrolled');
-            header.querySelector('.logo h1').style.color = 'var(--white)';
-            header.querySelectorAll('.nav-links li a').forEach(link => {
-                link.style.color = 'var(--white)';
-            });
         }
     }
 
