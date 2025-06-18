@@ -48,6 +48,10 @@ body {
     transition: var(--transition);
 }
 
+.header-transparent.inner-page {
+    background-color: var(--success-green);
+}
+
 .header-transparent.scrolled {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
