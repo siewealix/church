@@ -98,6 +98,11 @@ body {
     color: var(--primary-color);
 }
 
+/* Change link color when header is scrolled */
+.header-transparent.scrolled .nav-links li a {
+    color: var(--primary-color);
+}
+
 .logo-subtitle {
     color: var(--accent-color);
     font-size: 0.9rem;
