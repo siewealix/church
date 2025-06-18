@@ -425,6 +425,36 @@ section {
     background: var(--white);
 }
 
+/* Welcome Section */
+.welcome-section {
+    background: var(--light-bg);
+}
+
+.welcome-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.welcome-image {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+.welcome-text {
+    max-width: 600px;
+}
+
+.bible-verse {
+    margin-top: 1rem;
+    font-style: italic;
+    color: var(--primary-color);
+}
+
 .horaire-card {
     background: var(--white);
     padding: 2rem;
@@ -560,4 +590,13 @@ section {
         width: 100%;
         text-align: center;
     }
-} 
+
+    .welcome-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .welcome-image {
+        max-width: 100%;
+    }
+}
