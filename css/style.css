@@ -644,3 +644,22 @@ section {
         max-width: 100%;
     }
 }
+
+/* Afficher les éléments une fois l'animation déclenchée */
+.animate {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: var(--transition);
+}
+
+/* Animation du texte découpé en mots */
+.word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.word.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
