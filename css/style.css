@@ -534,6 +534,45 @@ section {
     text-align: center;
 }
 
+/* History Section */
+.history-section {
+    background: var(--white);
+}
+
+/* Team Section */
+.team-section {
+    background: var(--light-bg);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.team-member {
+    text-align: center;
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    border: 1px solid var(--purple-light);
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+/* Founder Section */
+.founder-section {
+    background: var(--white);
+    text-align: center;
+}
+
 /* Animations */
 @keyframes fadeInUp {
     from {
