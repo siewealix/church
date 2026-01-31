@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" role="img" aria-labelledby="title desc">
+  <title id="title">Responsable TFMI</title>
+  <desc id="desc">Portrait stylisé pour membre de l'équipe</desc>
+  <rect width="300" height="300" fill="#0f172a"/>
+  <circle cx="150" cy="120" r="60" fill="#1f6b4c"/>
+  <rect x="70" y="190" width="160" height="70" rx="35" fill="#f0b429"/>
+  <text x="150" y="280" text-anchor="middle" font-size="18" font-family="Poppins, sans-serif" fill="#f8fafc">TFMI</text>
+</svg>

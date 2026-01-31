@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-labelledby="title desc">
+  <title id="title">Communauté TFMI</title>
+  <desc id="desc">Bannière abstraite avec soleil levant</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1f6b4c"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#sky)"/>
+  <circle cx="600" cy="120" r="70" fill="#f0b429" opacity="0.8"/>
+  <path d="M0 320 C200 280 400 360 800 300 L800 400 L0 400 Z" fill="#0f172a" opacity="0.9"/>
+  <text x="60" y="90" font-size="32" font-family="Poppins, sans-serif" fill="#f8fafc">Triumphant Faith Ministries</text>
+</svg>

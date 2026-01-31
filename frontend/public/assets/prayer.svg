@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-labelledby="title desc">
+  <title id="title">Prière TFMI</title>
+  <desc id="desc">Illustration abstraite de prière</desc>
+  <rect width="600" height="400" fill="#0f172a"/>
+  <circle cx="300" cy="170" r="90" fill="#1f6b4c"/>
+  <rect x="260" y="90" width="80" height="160" fill="#f0b429" opacity="0.85"/>
+  <text x="300" y="330" text-anchor="middle" font-size="24" font-family="Poppins, sans-serif" fill="#f8fafc">Temps de prière</text>
+</svg>

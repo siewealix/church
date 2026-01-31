@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-labelledby="title desc">
+  <title id="title">Ministère TFMI</title>
+  <desc id="desc">Illustration abstraite pour ministère</desc>
+  <rect width="600" height="400" fill="#1f2937"/>
+  <path d="M0 320 C150 260 300 360 600 300 L600 400 L0 400 Z" fill="#1f6b4c"/>
+  <circle cx="500" cy="90" r="50" fill="#f0b429"/>
+  <text x="40" y="80" font-size="24" font-family="Poppins, sans-serif" fill="#f8fafc">Service & Louange</text>
+</svg>

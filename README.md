@@ -1,62 +1,145 @@
-# Site Web d'Église
+# TFMI — Site d'église MERN
 
-Ce projet est une version simplifiée d'un site web d'église, créé avec HTML, CSS et JavaScript natif. Il offre une interface moderne et responsive sans dépendre d'une base de données.
+Refonte complète du site de Triumphant Faith Ministries International (TFMI) en stack MERN avec un **frontend React (Vite + Tailwind)** et un **backend Node/Express + MongoDB**.
 
-## Fonctionnalités
+## ✨ Fonctionnalités
 
-- Design responsive
-- Menu de navigation mobile
-- Sections pour les services et événements
-- Animations au défilement
-- Intégration des réseaux sociaux
-- Défilement fluide pour la navigation
+### Frontend (public)
+- Accueil avec hero, présentation, CTA, prochains événements, dernier sermon, actualités, infos pratiques.
+- Pages : À propos, Ministères, Événements (liste + détail), Sermons (liste + détail), Galerie, Actualités, Contact, Don.
+- Design responsive, accessible et SEO-friendly (React Helmet Async).
 
-## Structure du Projet
+### Admin (protégé)
+- Authentification JWT.
+- Dashboard.
+- CRUD complet : événements, sermons, annonces, ministères, équipe, galerie.
+- Publication/dépublication.
+- Upload d’images via endpoint `/api/uploads` (stockage local).
 
+### Backend
+- Express + MongoDB + Mongoose.
+- Validation des données avec Zod.
+- Gestion d’erreurs centralisée.
+- CORS configuré.
+- Rate limiting pour l’auth.
+- Sécurité de base (Helmet).
+- Documentation API Swagger.
+- Tests API (Jest + Supertest) : auth + CRUD événements.
+
+## 🧱 Structure
 ```
-church-website/
-│
-├── index.html          # Page principale
-├── css/
-│   └── style.css      # Styles CSS
-├── js/
-│   └── main.js        # JavaScript
-└── images/            # Dossier pour les images
+backend/
+  src/
+    config/
+    controllers/
+    middlewares/
+    models/
+    routes/
+    utils/
+    validators/
+frontend/
+  src/
+    api/
+    components/
+    hooks/
+    pages/
+    routes/
+    styles/
 ```
 
-## Installation
+## ✅ Prérequis
+- Node.js 18+ (ou 20+ recommandé)
+- MongoDB local ou via Docker
 
-1. Clonez ce dépôt ou téléchargez les fichiers
-2. Placez vos images dans le dossier `images/`
-3. Ouvrez `index.html` dans votre navigateur
+## 🚀 Installation
 
-## Personnalisation
+### 1) Cloner et installer
+```bash
+npm install
+npm --prefix backend install
+npm --prefix frontend install
+```
 
-### Images
-- Remplacez `church.jpg` dans le dossier `images/` par votre propre image d'arrière-plan
-- Ajoutez vos propres images pour les sections "À propos" et autres
+### 2) Configurer les environnements
+Créer les fichiers `.env` à partir des exemples :
 
-### Contenu
-- Modifiez le texte dans `index.html` pour l'adapter à votre église
-- Ajustez les liens des réseaux sociaux dans le footer
-- Personnalisez les sections services et événements selon vos besoins
+```bash
+cp backend/.env.example backend/.env
+cp frontend/.env.example frontend/.env
+```
 
-### Style
-- Les couleurs peuvent être modifiées dans les variables CSS au début du fichier `style.css`
-- Ajustez les styles selon vos préférences
+#### Exemple `.env` backend
+```
+PORT=5000
+MONGODB_URI=mongodb://localhost:27017/tfmi
+JWT_SECRET=change_me
+CORS_ORIGIN=http://localhost:5173
+UPLOAD_DIR=uploads
+```
 
-## Compatibilité
+#### Exemple `.env` frontend
+```
+VITE_API_URL=http://localhost:5000
+```
 
-Le site est compatible avec les navigateurs modernes :
-- Chrome
-- Firefox
-- Safari
-- Edge
+### 3) Lancer en développement
+```bash
+npm run dev
+```
 
-## Licence
+Ou séparément :
+```bash
+npm --prefix backend run dev
+npm --prefix frontend run dev
+```
 
-Ce projet est sous licence MIT. Vous êtes libre de l'utiliser et de le modifier comme bon vous semble.
+## 🧪 Tests
+```bash
+npm --prefix backend test
+```
 
-## Support
+## 🌱 Seed (données de démonstration)
+```bash
+npm --prefix backend run seed
+```
 
-Pour toute question ou suggestion, n'hésitez pas à ouvrir une issue sur GitHub. 
+**Admin par défaut**
+- Email: `admin@tfmi.org`
+- Mot de passe: `admin123`
+
+> ⚠️ Pensez à changer ce mot de passe en production.
+
+## 📚 Documentation API
+Swagger est disponible sur :
+```
+http://localhost:5000/api/docs
+```
+
+## 📦 Production
+Frontend :
+```bash
+npm --prefix frontend run build
+```
+
+Backend :
+```bash
+npm --prefix backend run start
+```
+
+## 🐳 Docker (optionnel)
+Un `docker-compose.yml` est fourni pour lancer MongoDB + backend.
+
+```bash
+docker compose up --build
+```
+
+## 🔐 Sécurité & bonnes pratiques
+- Authentification JWT.
+- Rate limiting sur la route login.
+- Validation Zod sur toutes les routes sensibles.
+- Headers sécurisés via Helmet.
+- CORS configurable.
+
+## 📝 Notes
+- Les visuels par défaut sont des SVG dans `/frontend/public/assets` pour éviter les fichiers binaires.
+- Le lien de don externe peut être configuré dans la page Don.
