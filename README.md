@@ -1,15 +1,15 @@
-# TFMI — Site d'église MERN
+# TFMI
 
-Refonte complète du site de Triumphant Faith Ministries International (TFMI) en stack MERN avec un **frontend React (Vite + Tailwind)** et un **backend Node/Express + MongoDB**.
+Refonte complète du site de Triumphant Faith Ministries International (TFMI) en stack MERN avec un **frontend React** et un **backend Node/Express et MongoDB**.
 
-## ✨ Fonctionnalités
+## Fonctionnalités
 
-### Frontend (public)
+### Frontend
 - Accueil avec hero, présentation, CTA, prochains événements, dernier sermon, actualités, infos pratiques.
-- Pages : À propos, Ministères, Événements (liste + détail), Sermons (liste + détail), Galerie, Actualités, Contact, Don.
+- Pages : À propos, Ministères, Événements (liste et détail), Sermons (liste et détail), Galerie, Actualités, Contact, Don.
 - Design responsive, accessible et SEO-friendly (React Helmet Async).
 
-### Admin (protégé)
+### Admin
 - Authentification JWT.
 - Dashboard.
 - CRUD complet : événements, sermons, annonces, ministères, équipe, galerie.
@@ -17,16 +17,16 @@ Refonte complète du site de Triumphant Faith Ministries International (TFMI) en
 - Upload d’images via endpoint `/api/uploads` (stockage local).
 
 ### Backend
-- Express + MongoDB + Mongoose.
+- Express, MongoDB et Mongoose.
 - Validation des données avec Zod.
 - Gestion d’erreurs centralisée.
 - CORS configuré.
 - Rate limiting pour l’auth.
 - Sécurité de base (Helmet).
 - Documentation API Swagger.
-- Tests API (Jest + Supertest) : auth + CRUD événements.
+- Tests API (Jest et Supertest) : auth et CRUD événements.
 
-## 🧱 Structure
+## Structure
 ```
 backend/
   src/
@@ -47,11 +47,11 @@ frontend/
     styles/
 ```
 
-## ✅ Prérequis
-- Node.js 18+ (ou 20+ recommandé)
+## Prérequis
+- Node.js 18+ 
 - MongoDB local ou via Docker
 
-## 🚀 Installation
+## Installation
 
 ### 1) Cloner et installer
 ```bash
@@ -93,12 +93,12 @@ npm --prefix backend run dev
 npm --prefix frontend run dev
 ```
 
-## 🧪 Tests
+## Tests
 ```bash
 npm --prefix backend test
 ```
 
-## 🌱 Seed (données de démonstration)
+## Seed (données de démonstration)
 ```bash
 npm --prefix backend run seed
 ```
@@ -107,15 +107,15 @@ npm --prefix backend run seed
 - Email: `admin@tfmi.org`
 - Mot de passe: `admin123`
 
-> ⚠️ Pensez à changer ce mot de passe en production.
+>  Pensez à changer ce mot de passe en production.
 
-## 📚 Documentation API
+## Documentation API
 Swagger est disponible sur :
 ```
 http://localhost:5000/api/docs
 ```
 
-## 📦 Production
+## Production
 Frontend :
 ```bash
 npm --prefix frontend run build
@@ -126,20 +126,20 @@ Backend :
 npm --prefix backend run start
 ```
 
-## 🐳 Docker (optionnel)
+## Docker
 Un `docker-compose.yml` est fourni pour lancer MongoDB + backend.
 
 ```bash
 docker compose up --build
 ```
 
-## 🔐 Sécurité & bonnes pratiques
+## Sécurité & bonnes pratiques
 - Authentification JWT.
 - Rate limiting sur la route login.
 - Validation Zod sur toutes les routes sensibles.
 - Headers sécurisés via Helmet.
 - CORS configurable.
 
-## 📝 Notes
+## Notes
 - Les visuels par défaut sont des SVG dans `/frontend/public/assets` pour éviter les fichiers binaires.
 - Le lien de don externe peut être configuré dans la page Don.
