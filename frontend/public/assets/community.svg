@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-labelledby="title desc">
+  <title id="title">Communauté TFMI</title>
+  <desc id="desc">Illustration abstraite de la communauté</desc>
+  <rect width="600" height="400" fill="#0f172a"/>
+  <circle cx="120" cy="200" r="60" fill="#1f6b4c"/>
+  <circle cx="300" cy="180" r="80" fill="#f0b429"/>
+  <circle cx="480" cy="210" r="60" fill="#1f6b4c"/>
+  <text x="300" y="360" text-anchor="middle" font-size="28" font-family="Poppins, sans-serif" fill="#f8fafc">Ensemble vers la victoire</text>
+</svg>
